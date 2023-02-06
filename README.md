@@ -1,7 +1,9 @@
+[![npm badge](https://img.shields.io/npm/v/@sargunv/eslint-config)](https://www.npmjs.com/package/@sargunv/eslint-config)
+
 # @sargunv/eslint-config
 
 My personal ESLint styles, mostly based on
-https://github.com/AlloyTeam/eslint-config-alloy.
+[eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy).
 
 ## Usage
 
