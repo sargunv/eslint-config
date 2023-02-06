@@ -10,8 +10,8 @@
   "type": "commonjs",
   "main": "index.js",
   "files": [
-    "index.js",
-    "mixins/**/*"
+    "./index.js",
+    "./mixins/**/*.js"
   ],
   "scripts": {
     "build": "true",
