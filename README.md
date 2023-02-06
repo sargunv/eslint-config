@@ -2,7 +2,7 @@
 
 # @sargunv/eslint-config
 
-My personal ESLint styles, mostly based on
+My personal ESLint configs, mostly based on
 [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy).
 
 ## Usage
