@@ -1,0 +1,80 @@
+{
+  "name": "@sargunv/eslint-config",
+  "version": "0.1.0",
+  "homepage": "https://github.com/sargunv/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sargunv/eslint-config.git"
+  },
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "mixins/**/*"
+  ],
+  "scripts": {
+    "build": "true",
+    "configure": "yarn dlx @yarnpkg/sdks vscode && ignore-sync .",
+    "prepack": "run build",
+    "prepublish": "run style-check && run test",
+    "style-check": "eslint . && prettier --check .",
+    "style-fix": "eslint . --fix && prettier --write .",
+    "test": "true"
+  },
+  "prettier": "@sargunv/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@sargunv/eslint-config"
+    ],
+    "root": true
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^13.1.6",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint-config-alloy": "^4.9.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
+    "@sargunv/prettier-config": "^0.2.1",
+    "eslint": "^8.33.0",
+    "ignore-sync": "^6.0.2",
+    "prettier": "^2.8.3"
+  },
+  "peerDependencies": {
+    "@babel/core": "*",
+    "@babel/eslint-parser": "*",
+    "@babel/preset-react": "*",
+    "eslint": "*",
+    "typescript": "*"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": true
+    },
+    "@babel/eslint-parser": {
+      "optional": true
+    },
+    "@babel/preset-react": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "packageManager": "yarn@4.0.0-rc.38",
+  "languageName": "node",
+  "publishConfig": {
+    "access": "public"
+  }
+}
