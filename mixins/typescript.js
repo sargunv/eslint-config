@@ -2,6 +2,7 @@ module.exports = {
   parser: `@typescript-eslint/parser`,
   extends: [`alloy/typescript`],
   rules: {
+    "@typescript-eslint/no-invalid-void-type": `off`,
     "@typescript-eslint/no-parameter-properties": `off`,
     "@typescript-eslint/no-unused-vars": [
       `error`,
