@@ -1,6 +1,10 @@
+// @ts-check
+
+// @ts-ignore
 require(`@rushstack/eslint-patch/modern-module-resolution`)
 
-module.exports = {
+/** @type {import('eslint').ESLint.ConfigData} */
+const config = {
   root: true,
   reportUnusedDisableDirectives: true,
   plugins: [`simple-import-sort`],
@@ -54,3 +58,5 @@ module.exports = {
   },
   overrides: [{ files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] }],
 }
+
+module.exports = config

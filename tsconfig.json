@@ -1,0 +1,6 @@
+{
+  "extends": "@sargunv/typescript-config/node",
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

@@ -1,4 +1,7 @@
-module.exports = {
+// @ts-check
+
+/** @type {import('eslint').ESLint.ConfigData} */
+const mixin = {
   parser: `@typescript-eslint/parser`,
   extends: [`alloy/typescript`],
   rules: {
@@ -58,3 +61,5 @@ module.exports = {
     },
   ],
 }
+
+module.exports = mixin

@@ -16,16 +16,17 @@
   "scripts": {
     "build": "true",
     "configure": "yarn dlx @yarnpkg/sdks vscode && ignore-sync .",
+    "fix": "eslint . --fix && prettier --write .",
+    "lint": "tsc --noEmit && eslint . && prettier --check . --loglevel warn",
     "prepack": "run build",
-    "prepublish": "run style-check && run test",
-    "style-check": "eslint . && prettier --check .",
-    "style-fix": "eslint . --fix && prettier --write .",
+    "prepublish": "run lint && run test",
     "test": "true"
   },
   "prettier": "@sargunv/prettier-config",
   "eslintConfig": {
     "extends": [
-      "@sargunv/eslint-config"
+      "@sargunv/eslint-config",
+      "@sargunv/eslint-config/mixins/typescript"
     ],
     "root": true
   },
@@ -44,12 +45,13 @@
     "eslint-plugin-simple-import-sort": "^10.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/eslint-parser": "^7.19.1",
     "@sargunv/prettier-config": "^0.2.1",
+    "@sargunv/typescript-config": "^0.1.0",
+    "@types/eslint": "^8.21.0",
     "eslint": "^8.33.0",
     "ignore-sync": "^6.0.2",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "@babel/core": "*",

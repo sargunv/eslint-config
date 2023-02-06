@@ -1,4 +1,7 @@
-module.exports = {
+// @ts-check
+
+/** @type {import('eslint').ESLint.ConfigData} */
+const mixin = {
   settings: {
     react: {
       version: `detect`,
@@ -13,3 +16,5 @@ module.exports = {
     "react/no-unescaped-entities": `off`,
   },
 }
+
+module.exports = mixin
