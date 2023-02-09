@@ -48,6 +48,9 @@ const config = {
     // this is useful for arrow functions without braces
     "no-void": `off`,
 
+    // aesthetic preference
+    "curly": [`error`, `multi-or-nest`, `consistent`],
+
     // props, req, res, fn, etc. are common names
     "unicorn/prevent-abbreviations": `off`,
 
