@@ -7,7 +7,7 @@ require(`@rushstack/eslint-patch/modern-module-resolution`)
 const config = {
   root: true,
   reportUnusedDisableDirectives: true,
-  plugins: [`simple-import-sort`],
+  plugins: [`simple-import-sort`, `import`],
   parserOptions: {
     ecmaFeatures: { jsx: true },
   },
@@ -26,6 +26,11 @@ const config = {
 
     "simple-import-sort/imports": `error`, // unicorn/prefer-node-protocol helps group imports
     "simple-import-sort/exports": `error`,
+
+    "import/extensions": [`error`, `ignorePackages`],
+    "import/first": `error`,
+    "import/newline-after-import": [`error`, { considerComments: true }],
+    "import/no-cycle": `error`,
 
     // Override presets from the base configs
 
