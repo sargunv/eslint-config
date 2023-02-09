@@ -70,6 +70,9 @@ const config = {
 
     // sometimes it's good to be explicit
     "unicorn/no-useless-undefined": `off`,
+
+    // if statements are fine
+    "unicorn/prefer-switch": `off`,
   },
   overrides: [{ files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] }],
 }
