@@ -1,6 +1,6 @@
 // @ts-check
 
-// @ts-ignore
+// @ts-expect-error no types for this package
 require(`@rushstack/eslint-patch/modern-module-resolution`)
 
 /** @type {import('eslint').ESLint.ConfigData} */
@@ -18,30 +18,18 @@ const config = {
     `alloy`,
     `plugin:promise/recommended`,
     `plugin:security/recommended`,
+    `plugin:unicorn/recommended`,
     `prettier`,
   ],
   rules: {
     // Configure the plugins that don't have base configs.
-    "simple-import-sort/imports": [
-      `error`,
-      {
-        // See https://github.com/lydell/eslint-plugin-simple-import-sort/#custom-grouping.
-        groups: [
-          [`^\\u0000`], // Side effect imports (the plugin inserts '\\u0000' for us to match).
-          // Node builtins.
-          [
-            `^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)`,
-          ],
-          [`^(?!@sargunv)@?\\w`], // Packages NOT in @sargunv scope.
-          [`^@sargunv`], // Packages in @sargunv scope.
-          [`^\\.`], // Relative imports.
-          [`^`], // Catchall uncovered by the rest. IRL this shouldn't ever match?
-        ],
-      },
-    ],
+
+    "simple-import-sort/imports": `error`, // unicorn/prefer-node-protocol helps group imports
     "simple-import-sort/exports": `error`,
 
     // Override presets from the base configs
+
+    // allow unused vars if they're prefixed with _
     "no-unused-vars": [
       `error`,
       {
@@ -53,8 +41,27 @@ const config = {
         caughtErrorsIgnorePattern: `^_`,
       },
     ],
+
+    // never manually convert a string again
     "quotes": [`error`, `backtick`],
+
+    // this is useful for arrow functions without braces
     "no-void": `off`,
+
+    // props, req, res, fn, etc. are common names
+    "unicorn/prevent-abbreviations": `off`,
+
+    // we want to use this config in both commonjs and esm
+    "unicorn/prefer-module": `off`,
+
+    // false positives on anything with a similarly named method
+    "unicorn/no-array-method-this-argument": `off`,
+
+    // if foo == null is useful, also lots of apis use null
+    "unicorn/no-null": `off`,
+
+    // sometimes it's good to be explicit
+    "unicorn/no-useless-undefined": `off`,
   },
   overrides: [{ files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] }],
 }
