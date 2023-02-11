@@ -74,7 +74,16 @@ const config = {
     // if statements are fine
     "unicorn/prefer-switch": `off`,
   },
-  overrides: [{ files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] }],
+  overrides: [
+    { files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] },
+    {
+      // vitest typecheck fails to parse backtick strings
+      files: [`*.test-d.ts`],
+      rules: {
+        quotes: [`error`, `double`],
+      },
+    },
+  ],
 }
 
 module.exports = config
