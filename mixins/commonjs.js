@@ -4,6 +4,7 @@
 const mixin = {
   rules: {
     "unicorn/prefer-module": `off`,
+    "unicorn/prefer-top-level-await": `off`,
   },
 }
 
