@@ -26,6 +26,7 @@
   "eslintConfig": {
     "extends": [
       "@sargunv/eslint-config",
+      "@sargunv/eslint-config/mixins/commonjs",
       "@sargunv/eslint-config/mixins/typescript"
     ],
     "root": true

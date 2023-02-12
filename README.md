@@ -14,6 +14,7 @@ In package.json (or your ESLint config):
   "eslintConfig": {
     "extends": [
       "@sargunv/eslint-config",
+      "@sargunv/eslint-config/mixins/commonjs",
       "@sargunv/eslint-config/mixins/react",
       "@sargunv/eslint-config/mixins/next",
       "@sargunv/eslint-config/mixins/typescript"

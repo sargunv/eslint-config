@@ -59,9 +59,6 @@ const config = {
     // props, req, res, fn, etc. are common names
     "unicorn/prevent-abbreviations": `off`,
 
-    // we want to use this config in both commonjs and esm
-    "unicorn/prefer-module": `off`,
-
     // false positives on anything with a similarly named method
     "unicorn/no-array-method-this-argument": `off`,
 
