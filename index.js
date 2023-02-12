@@ -73,7 +73,11 @@ const config = {
 
     // if statements are fine
     "unicorn/prefer-switch": `off`,
+
+    // reduce is fine too, ugh unicorn's defaults are wild
+    "unicorn/no-array-reduce": `off`,
   },
+  ignorePatterns: [`dist/`],
   overrides: [
     { files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] },
     {
