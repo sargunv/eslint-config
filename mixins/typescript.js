@@ -18,6 +18,8 @@ const mixin = {
         caughtErrorsIgnorePattern: `^_`,
       },
     ],
+    "quotes": `off`,
+    "@typescript-eslint/quotes": [`error`, `backtick`],
   },
   overrides: [
     {
