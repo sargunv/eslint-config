@@ -61,6 +61,13 @@ const mixin = {
         "spaced-comment": `off`,
       },
     },
+    {
+      files: [`*.test-d.ts`],
+      rules: {
+        "quotes": `off`,
+        "@typescript-eslint/quotes": [`error`, `double`],
+      },
+    },
   ],
 }
 
