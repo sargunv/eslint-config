@@ -74,7 +74,7 @@ const config = {
     // reduce is fine too, ugh unicorn's defaults are wild
     "unicorn/no-array-reduce": `off`,
   },
-  ignorePatterns: [`dist/`],
+  ignorePatterns: [`dist/`, `coverage/`],
   overrides: [
     { files: [`*.cjs`, `*.js`, `*.jsx`, `*.mjs`] },
     {
