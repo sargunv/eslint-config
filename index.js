@@ -73,6 +73,9 @@ const config = {
 
     // reduce is fine too, ugh unicorn's defaults are wild
     "unicorn/no-array-reduce": `off`,
+
+    // way too many false positives (like, every array index)
+    "security/detect-object-injection": `off`,
   },
   ignorePatterns: [`dist/`, `coverage/`],
   overrides: [
