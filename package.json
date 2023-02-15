@@ -14,13 +14,9 @@
     "./mixins/**/*.js"
   ],
   "scripts": {
-    "build": "true",
     "configure": "yarn dlx @yarnpkg/sdks vscode && ignore-sync .",
     "fix": "eslint . --fix && prettier --write .",
-    "lint": "tsc --noEmit && eslint . && prettier --check . --loglevel warn",
-    "prepack": "run build",
-    "prepublish": "run lint && run test",
-    "test": "true"
+    "lint": "tsc --noEmit && eslint . && prettier --check . --loglevel warn"
   },
   "prettier": "@sargunv/prettier-config",
   "eslintConfig": {
@@ -77,7 +73,7 @@
       "optional": true
     }
   },
-  "packageManager": "yarn@4.0.0-rc.38",
+  "packageManager": "yarn@4.0.0-rc.39",
   "languageName": "node",
   "publishConfig": {
     "access": "public"

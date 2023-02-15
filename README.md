@@ -1,4 +1,4 @@
-[![npm badge](https://img.shields.io/npm/v/@sargunv/eslint-config)](https://www.npmjs.com/package/@sargunv/eslint-config)
+[![NPM](https://img.shields.io/npm/v/@sargunv/eslint-config)](https://www.npmjs.com/package/@sargunv/eslint-config)
 
 # @sargunv/eslint-config
 
