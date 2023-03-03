@@ -28,7 +28,7 @@
     "root": true
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^13.1.6",
+    "@next/eslint-plugin-next": "^13.2.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
