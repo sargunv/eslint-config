@@ -41,7 +41,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-security": "^1.7.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unicorn": "^45.0.2"
+    "eslint-plugin-unicorn": "^47.0.0"
   },
   "devDependencies": {
     "@sargunv/prettier-config": "^0.2.2",
