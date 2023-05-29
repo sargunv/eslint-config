@@ -101,12 +101,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:^13.2.1":
-  version: 13.2.1
-  resolution: "@next/eslint-plugin-next@npm:13.2.1"
+"@next/eslint-plugin-next@npm:^13.4.4":
+  version: 13.4.4
+  resolution: "@next/eslint-plugin-next@npm:13.4.4"
   dependencies:
     glob: "npm:7.1.7"
-  checksum: 3e41687ad1dc38b68d98cb99864cdc2fef0c580513607083e628f408d3d0b259fae7f6471fcb810cdc3905cbb71e79069cde0f8496c645cba64804afb022a7b9
+  checksum: 83e7b33584cf10c0847fba7aad521b57c507ed659a649ace12a0ecc1f81491b16056a5ae9f72963c2d957876cfe66bcadce3c4c2ca2c0eec22f193d5327f34e4
   languageName: node
   linkType: hard
 
@@ -162,7 +162,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@sargunv/eslint-config@workspace:."
   dependencies:
-    "@next/eslint-plugin-next": "npm:^13.2.1"
+    "@next/eslint-plugin-next": "npm:^13.4.4"
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@sargunv/prettier-config": "npm:^0.2.2"
     "@sargunv/typescript-config": "npm:^0.2.0"
