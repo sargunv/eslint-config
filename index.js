@@ -17,7 +17,7 @@ const config = {
   extends: [
     `alloy`,
     `plugin:promise/recommended`,
-    `plugin:security/recommended`,
+    `plugin:security/recommended-legacy`,
     `plugin:unicorn/recommended`,
     `prettier`,
   ],
